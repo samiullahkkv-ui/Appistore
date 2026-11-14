@@ -9,6 +9,20 @@ create table if not exists public.user_roles (
 );
 alter table public.user_roles enable row level security;
 
+create or replace function public.appistore_new_user_role()
+returns trigger language plpgsql security definer set search_path = public
+as $
+begin
+  insert into public.user_roles (user_id, role) values (new.id, 'developer')
+  on conflict (user_id) do nothing;
+  return new;
+end;
+$;
+drop trigger if exists appistore_auth_user_created on auth.users;
+create trigger appistore_auth_user_created
+after insert on auth.users for each row execute procedure public.appistore_new_user_role();
+
+
 create or replace function public.is_appistore_admin()
 returns boolean language sql stable security definer set search_path = public
 as $$

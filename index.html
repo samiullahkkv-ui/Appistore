@@ -28,8 +28,7 @@ body.dark .x{background:#263653;color:white}body.dark .studioEmpty{background:#1
 @media(max-width:680px){.featureSlide{grid-template-columns:1fr .55fr;padding:23px 48px 44px 20px;gap:8px;min-height:220px}.featureVisual img{width:100px;height:100px;border-radius:24px}.featureCopy h2{font-size:25px}.featureCopy p{font-size:11px}.featureDots{left:20px;bottom:19px}.featureControls{right:10px;bottom:10px}.discoveryGrid{grid-template-columns:1fr}.themeToggle{padding:8px}}
 @media(min-width:681px) and (max-width:900px){.discoveryGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-/* Play Store inspired mobile storefront */
-#featureCarousel{display:none!important}
+/* LiteAPKs-inspired original download portal refresh */
 body{background:#101010;color:#f1f1f1}
 .header{background:#101010;box-shadow:none;border-bottom:1px solid #222}
 .head{height:auto;min-height:66px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
@@ -72,6 +71,59 @@ body{background:#101010;color:#f1f1f1}
 body.dark{--paper:#101010;--ink:#f1f1f1;--muted:#aaa;--line:#292929;background:#101010;color:#f1f1f1}
 @media(min-width:700px){.shell{max-width:900px}.storeSearch{order:0;width:min(430px,42%);margin-left:auto}.head{flex-wrap:nowrap}.headActions{margin-left:0}.cards,.discoveryGrid{grid-template-columns:1fr}.storeApp.storeApp{padding:15px 4px}}
 @media(max-width:560px){.head{gap:9px}.logo{font-size:16px}.headActions .btn{display:none}.storeSearch{height:46px}.shell{padding:0 16px}.section{margin:18px 0}.storeTabs{margin-top:10px}.storeApp .appIcon{width:64px;height:64px}}
+
+/* Appistore download portal — original LiteAPKs-inspired layout */
+:root{--paper:#f5f7fb;--ink:#17243b;--muted:#71809a;--line:#e4e9f2;--blue:#2867df;--navy:#12213d}
+body{background:#f5f7fb;color:#17243b}
+.header{background:#fff;color:#17243b;border-bottom:1px solid #e8edf5;box-shadow:0 3px 18px #17243b0a}
+.head{min-height:74px}
+.logo{color:#17243b}
+.logoMark{color:#fff;background:linear-gradient(135deg,#2367e8,#24b9ad)}
+.storeSearch{order:0;width:min(470px,48%);height:46px;background:#f0f3f8;border:1px solid #e7ebf3;border-radius:12px;color:#63718b}
+.storeSearch input{color:#17243b}.storeSearch input::placeholder{color:#8b97aa}
+.storeSearch button{color:#77839a}
+.headActions .themeToggle{background:#f0f3f8;color:#233553;border:1px solid #e1e7f0}
+.headActions .btnGhost{background:#f0f3f8;color:#263957;border:1px solid #e1e7f0}
+main.shell{max-width:1160px}
+.storeTabs{margin:18px 0 24px}
+.chips{gap:10px}
+.chip{background:#fff;border:1px solid #e3e8f1;color:#44536d;border-radius:10px;padding:10px 17px}
+.chip.active{background:#eaf1ff;border-color:#c9d9ff;color:#245ac1}
+.sectionTitle h2{color:#17243b;font-size:21px}
+.sectionTitle span{color:#7b879b}
+#pinnedSection{background:#edf3ff;border:1px solid #dce7ff;border-radius:17px}
+.cards,.discoveryGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.app.storeApp{background:#fff;border:1px solid #e5eaf2;border-radius:15px;box-shadow:0 5px 20px #1c31500a;padding:15px;display:flex;flex-direction:column;gap:0;min-width:0}
+.storeApp .appTop{display:flex;align-items:center;gap:12px}
+.storeApp .appIcon{width:68px;height:68px;border-radius:16px;grid-column:auto;grid-row:auto;box-shadow:0 2px 8px #1d315012}
+.storeApp .appTop>div{min-width:0}
+.storeApp .appName{font-size:15px;color:#17243b;font-weight:800}
+.storeApp .meta{color:#77849a;font-size:11px}
+.storeApp .ratingLine{font-size:11px;color:#68758b}
+.storeApp .appDesc{color:#63718a;font-size:12px;line-height:1.5;margin:12px 0;min-height:36px}
+.storeApp .appFoot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.storeApp .appFoot .meta{display:inline}
+.storeApp .appFoot button{background:#edf3ff;color:#245ac1;border:1px solid #dce7ff;border-radius:9px;padding:7px 12px}
+.storeApp .pinTag{display:inline;color:#245ac1}
+.discoverySection{margin:27px 0}
+.discoveryGrid .app{padding:14px}
+.featureCarousel{display:block!important;margin:18px 0 26px}
+.featureSlide{border-radius:18px}
+.featureCarousel .featureCopy h2{color:#fff}
+.dock{background:#fff;border-top:1px solid #e5eaf2;box-shadow:0 -4px 20px #17243b0a}
+.dock button{color:#65728a}
+.dock button.active{background:#eaf1ff;color:#245ac1}
+.dock .plus{background:#eef3ff;color:#245ac1}
+.empty{background:#fff;border-color:#dce3ef;color:#6f7d94}
+.foot{color:#8490a3}
+.detailHero h2{color:#17243b}
+.detailMetrics{border-color:#e5eaf2}
+.detailMetrics div{border-color:#e5eaf2}
+.detailDescription{color:#596983}
+.reviewComposer{background:#f3f6fb}
+.reviewCard{background:#fff;border-color:#e5eaf2}
+@media(min-width:700px){.cards,.discoveryGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.storeSearch{order:0;width:min(470px,48%)}.head{flex-wrap:nowrap}.storeApp.storeApp{padding:16px}}
+@media(max-width:680px){.head{gap:10px;flex-wrap:wrap;padding:10px 0}.storeSearch{order:3;width:100%;max-width:none}.headActions{margin-left:auto}.cards,.discoveryGrid{grid-template-columns:1fr}.storeApp.storeApp{padding:13px}.storeApp .appIcon{width:64px;height:64px}.featureSlide{grid-template-columns:1fr .5fr}.sectionTitle h2{font-size:19px}}
 </style></head>
 <body>
 <header class="header"><div class="shell head"><div class="logo"><div class="logoMark">A.</div>APPiSTORE</div><div class="storeSearch"><span>⌕</span><input id="search" type="search" placeholder="Search apps & games" aria-label="Search apps and games"><button id="clearSearch" aria-label="Clear search">✕</button></div><div class="headActions"><button class="themeToggle" id="themeToggle" aria-label="Toggle color theme">◐</button><button class="btn btnGhost btnSmall" id="loginOpen">Sign in</button></div></div></header>
@@ -112,7 +164,7 @@ function appCard(a){const url=imgUrl(a.icon_path);return '<article class="app st
 async function loadPublic(){const {data,error}=await sb.from('apps').select('*').eq('status','approved').order('is_pinned',{ascending:false}).order('pinned_at',{ascending:false,nullsFirst:false}).order('created_at',{ascending:false});if(error){$('#appList').innerHTML='<div class="empty">App database is preparing. Please try again shortly.</div>';$('#resultCount').textContent='';return}apps=data||[];if(apps.length){const ids=apps.map(a=>a.id),devs=[...new Set(apps.map(a=>a.developer_id))];const [reviews,profiles]=await Promise.all([sb.from('app_reviews').select('app_id,rating').in('app_id',ids),sb.from('developer_profiles').select('user_id,display_name').in('user_id',devs)]);const profileMap=Object.fromEntries((profiles.data||[]).map(p=>[p.user_id,p.display_name]));const stats={};(reviews.data||[]).forEach(r=>{if(!stats[r.app_id])stats[r.app_id]={sum:0,count:0};stats[r.app_id].sum+=r.rating;stats[r.app_id].count++});apps=apps.map(a=>({...a,developer_name:profileMap[a.developer_id]||'Independent developer',rating_avg:stats[a.id]?(stats[a.id].sum/stats[a.id].count).toFixed(1):null,review_count:stats[a.id]?.count||0}))}renderPublic()}
 function renderFeatured(){const items=apps.filter(a=>a.is_pinned).length?apps.filter(a=>a.is_pinned):apps.slice(0,5);const section=$('#featureCarousel');if(!items.length){section.classList.add('hidden');return}section.classList.remove('hidden');featureIndex=((featureIndex%items.length)+items.length)%items.length;const a=items[featureIndex];$('#featureTrack').innerHTML='<article class="featureSlide"><div class="featureCopy"><div class="featureKicker">✦ '+(a.is_pinned?'FEATURED BY APPiSTORE':'EDITOR’S DISCOVERY')+'</div><h2>'+safe(a.app_name)+'</h2><p>'+safe(a.description)+'</p><div class="meta" style="color:#d4defd;margin-bottom:14px">'+safe(a.developer_name||'Independent developer')+' · ★ '+(a.rating_avg||'New')+'</div><button class="btn btnMint" data-detail="'+a.id+'">Explore app →</button></div><div class="featureVisual"><img src="'+safe(imgUrl(a.icon_path))+'" alt="'+safe(a.app_name)+' app icon"></div></article>';$('#featureDots').innerHTML=items.map((x,i)=>'<button class="'+(i===featureIndex?'active':'')+'" data-feature-index="'+i+'" aria-label="Show featured app '+(i+1)+'"></button>').join('');if(items.length>1&&!featureTimer)featureTimer=setInterval(()=>moveFeatured(1),6500);if(items.length<2&&featureTimer){clearInterval(featureTimer);featureTimer=null}}
 function moveFeatured(step){const count=(apps.filter(a=>a.is_pinned).length?apps.filter(a=>a.is_pinned):apps.slice(0,5)).length;if(count<2)return;featureIndex=(featureIndex+step+count)%count;renderFeatured()}
-function renderPublic(){const q=$('#search').value.trim().toLowerCase();const list=apps.filter(a=>(category==='All'||a.category===category)&&(!q||(a.app_name+' '+a.description+' '+a.category).toLowerCase().includes(q)));const pinned=list.filter(a=>a.is_pinned);$('#pinnedSection').classList.toggle('hidden',!pinned.length);$('#pinnedApps').innerHTML=pinned.map(appCard).join('');$('#appList').innerHTML=list.length?list.map(appCard).join(''):'<div class="empty">No published apps in this category yet. Be the first developer to submit one.</div>';$('#resultCount').textContent=list.length+' published';$('#appCount').textContent=apps.length;const byDownloads=[...list].sort((a,b)=>Number(b.download_count||0)-Number(a.download_count||0));const rated=list.filter(a=>a.rating_avg).sort((a,b)=>Number(b.rating_avg)-Number(a.rating_avg));const newest=[...list].sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));$('#trendingApps').innerHTML=byDownloads.slice(0,3).map(appCard).join('')||'<div class="empty">Apps will appear here as they become popular.</div>';$('#topRatedApps').innerHTML=rated.slice(0,3).map(appCard).join('')||'<div class="empty">Ratings will appear here after users review apps.</div>';$('#newReleaseApps').innerHTML=newest.slice(0,3).map(appCard).join('')||'<div class="empty">New releases will appear here.</div>';renderFeatured()}
+function renderPublic(){const q=$('#search').value.trim().toLowerCase();const list=apps.filter(a=>(category==='All'||a.category===category)&&(!q||(a.app_name+' '+a.description+' '+a.category).toLowerCase().includes(q)));const pinned=list.filter(a=>a.is_pinned);$('#pinnedSection').classList.toggle('hidden',!pinned.length);$('#pinnedApps').innerHTML=pinned.map(appCard).join('');$('#appList').innerHTML=list.length?list.map(appCard).join(''):'<div class="empty">No published apps in this category yet. Apps approved by the Appistore admin will appear here automatically.</div>';$('#resultCount').textContent=list.length+' published';$('#appCount').textContent=apps.length;const byDownloads=[...list].sort((a,b)=>Number(b.download_count||0)-Number(a.download_count||0));const rated=list.filter(a=>a.rating_avg).sort((a,b)=>Number(b.rating_avg)-Number(a.rating_avg));const newest=[...list].sort((a,b)=>new Date(b.created_at)-new Date(a.created_at));const showTrending=list.length>1&&byDownloads.some(a=>Number(a.download_count||0)>0);const showRated=rated.length>0;const showNew=list.length>1;$('#trendingApps').closest('.discoverySection').classList.toggle('hidden',!showTrending);$('#topRatedApps').closest('.discoverySection').classList.toggle('hidden',!showRated);$('#newReleaseApps').closest('.discoverySection').classList.toggle('hidden',!showNew);$('#trendingApps').innerHTML=byDownloads.slice(0,3).map(appCard).join('');$('#topRatedApps').innerHTML=rated.slice(0,3).map(appCard).join('');$('#newReleaseApps').innerHTML=newest.slice(0,3).map(appCard).join('');renderFeatured()}
 async function uploadFile(file,path){const {error}=await sb.storage.from('appistore-assets').upload(path,file,{upsert:false,contentType:file.type});if(error)throw error;return path}
 async function refreshAccount(){const {data:{user:u}}=await sb.auth.getUser();user=u;$('#loginOpen').textContent=user?'My Studio':'Developer Login';$('#submitOpen').textContent='＋ Publish App';$('#accountSection').classList.toggle('hidden',!user);if(!user){isAdmin=false;return}$('#accountEmail').textContent=user.email||'Signed in';const {data:profile}=await sb.from('developer_profiles').select('display_name').eq('user_id',user.id).maybeSingle();$('#developerName').value=profile?.display_name||'';const {data:role}=await sb.from('user_roles').select('role').eq('user_id',user.id).maybeSingle();isAdmin=role?.role==='admin';$('#adminOpen').classList.toggle('hidden',!isAdmin);await loadMine()}
 $('#saveDeveloperProfile').onclick=async()=>{if(!user){toast('Sign in first.');return}const display_name=$('#developerName').value.trim();if(display_name.length<2||display_name.length>60){toast('Name must be 2–60 characters.');return}const {error}=await sb.from('developer_profiles').upsert({user_id:user.id,display_name,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error){toast(error.message);return}toast('Developer profile saved.');await loadPublic()};

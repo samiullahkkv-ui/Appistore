@@ -27,14 +27,58 @@ body.dark .detailMetrics{border-color:#293957}body.dark .detailMetrics div{borde
 body.dark .x{background:#263653;color:white}body.dark .studioEmpty{background:#121d35;border-color:#293957}
 @media(max-width:680px){.featureSlide{grid-template-columns:1fr .55fr;padding:23px 48px 44px 20px;gap:8px;min-height:220px}.featureVisual img{width:100px;height:100px;border-radius:24px}.featureCopy h2{font-size:25px}.featureCopy p{font-size:11px}.featureDots{left:20px;bottom:19px}.featureControls{right:10px;bottom:10px}.discoveryGrid{grid-template-columns:1fr}.themeToggle{padding:8px}}
 @media(min-width:681px) and (max-width:900px){.discoveryGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Play Store inspired mobile storefront */
+body{background:#101010;color:#f1f1f1}
+.header{background:#101010;box-shadow:none;border-bottom:1px solid #222}
+.head{height:auto;min-height:66px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.logo{font-size:18px}.logoMark{width:34px;height:34px}
+.storeSearch{display:flex;align-items:center;gap:10px;order:3;width:100%;height:48px;padding:0 15px;border-radius:28px;background:#252525;color:#c7d4eb}
+.storeSearch>span{font-size:24px;line-height:1}
+.storeSearch input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:#fff;font-size:15px}
+.storeSearch input::placeholder{color:#b7b7b7}
+.storeSearch button{border:0;background:transparent;color:#bbb;font-size:15px;padding:6px}
+.headActions{margin-left:auto}
+.themeToggle{background:#252525;border:0;border-radius:50%;width:38px;height:38px}
+.storeTabs{margin:12px 0 22px}
+.chips{gap:9px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{background:#242424;border:0;color:#eee;border-radius:25px;padding:12px 17px;font-size:14px}
+.chip.active{background:#174f78;color:#d9f1ff;border:0}
+.sectionTitle h2{font-size:21px;color:#f4f4f4}
+.sectionTitle span{color:#aaa}
+.cards,.discoveryGrid{display:grid;grid-template-columns:1fr;gap:5px}
+.app.storeApp{background:transparent;border:0;border-radius:0;box-shadow:none;padding:13px 0;display:grid;grid-template-columns:68px minmax(0,1fr);column-gap:13px;align-items:start;border-bottom:1px solid #242424}
+.storeApp .appTop{display:contents}
+.storeApp .appIcon{grid-column:1;grid-row:1 / span 3;width:64px;height:64px;border-radius:17px}
+.storeApp .appTop>div{grid-column:2;min-width:0}
+.storeApp .appName{font-size:16px;font-weight:650;color:#f3f3f3}
+.storeApp .meta{font-size:12px;color:#bbb}
+.storeApp .ratingLine{font-size:12px;color:#d0d0d0;font-weight:500}
+.storeApp .appDesc{grid-column:2;margin:4px 0 2px;color:#c6c6c6;font-size:13px;line-height:1.45;-webkit-line-clamp:2}
+.storeApp .appFoot{grid-column:2;justify-content:flex-start;margin-top:3px}
+.storeApp .appFoot .meta,.storeApp .pinTag{display:none}
+.storeApp .appFoot button{background:#242424;color:#d7e9ff;border-radius:20px;padding:5px 10px}
+.discoverySection{margin:25px 0}
+.discoverySection .sectionTitle{margin-bottom:5px}
+#pinnedSection{background:#171717;border:0;padding:12px;border-radius:16px}
+#pinnedSection .storeApp{padding:10px 0}
+.dock{background:#202124;border-top:1px solid #333;box-shadow:none;justify-content:space-around;gap:0;padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+.dock button{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:64px;color:#c4c7c5;font-size:12px;padding:7px 12px;border-radius:24px}
+.dock button span{font-size:21px;line-height:1.1}
+.dock button.active{background:#164f75;color:#d5efff}
+.dock .plus{background:transparent;color:#c4c7c5}
+.foot{color:#999}
+body.dark{--paper:#101010;--ink:#f1f1f1;--muted:#aaa;--line:#292929;background:#101010;color:#f1f1f1}
+@media(min-width:700px){.shell{max-width:900px}.storeSearch{order:0;width:min(430px,42%);margin-left:auto}.head{flex-wrap:nowrap}.headActions{margin-left:0}.cards,.discoveryGrid{grid-template-columns:1fr}.storeApp.storeApp{padding:15px 4px}}
+@media(max-width:560px){.head{gap:9px}.logo{font-size:16px}.headActions .btn{display:none}.storeSearch{height:46px}.shell{padding:0 16px}.section{margin:18px 0}.storeTabs{margin-top:10px}.storeApp .appIcon{width:64px;height:64px}}
 </style></head>
 <body>
-<header class="header"><div class="shell head"><div class="logo"><div class="logoMark">A.</div>APPiSTORE</div><div class="headActions"><button class="themeToggle" id="themeToggle" aria-label="Toggle color theme">◐</button><button class="btn btnGhost btnSmall" id="loginOpen">Developer Login</button><button class="btn btnMint btnSmall" id="submitOpen">＋ Publish App</button></div></div></header>
+<header class="header"><div class="shell head"><div class="logo"><div class="logoMark">A.</div>APPiSTORE</div><div class="storeSearch"><span>⌕</span><input id="search" type="search" placeholder="Search apps & games" aria-label="Search apps and games"><button id="clearSearch" aria-label="Clear search">✕</button></div><div class="headActions"><button class="themeToggle" id="themeToggle" aria-label="Toggle color theme">◐</button><button class="btn btnGhost btnSmall" id="loginOpen">Sign in</button></div></div></header>
 <main class="shell">
-<section class="hero"><div class="eyebrow">THE INDIE APP DISCOVERY HUB</div><h1>Find your next<br>favourite app.</h1><p>Discover useful apps and fresh games from independent developers. Every listing is reviewed before it goes live.</p><button class="btn btnMint" id="heroPublish">Publish your app free ↗</button><div class="heroStats"><div><b id="appCount">—</b>Live apps</div><div><b>FREE</b>For developers</div><div><b>4 shots</b>Per listing</div></div></section>
-<section class="section"><div class="sectionTitle"><h2>Explore categories</h2><span>Find your kind of app</span></div><div class="chips" id="categories"><button class="chip active" data-cat="All">✦ All apps</button><button class="chip" data-cat="Tools">⚙ Tools</button><button class="chip" data-cat="Games">🎮 Games</button><button class="chip" data-cat="Social">◉ Social</button><button class="chip" data-cat="Photo">▧ Photo</button><button class="chip" data-cat="Education">▤ Education</button><button class="chip" data-cat="Other">✧ Other</button></div></section>
+<section class="hero hidden"><div class="eyebrow">THE INDIE APP DISCOVERY HUB</div><h1>Find your next<br>favourite app.</h1><p>Discover useful apps and fresh games from independent developers. Every listing is reviewed before it goes live.</p><button class="btn btnMint" id="heroPublish">Publish your app free ↗</button><div class="heroStats"><div><b id="appCount">—</b>Live apps</div><div><b>FREE</b>For developers</div><div><b>4 shots</b>Per listing</div></div></section>
+<section class="section storeTabs"><div class="chips" id="categories"><button class="chip active" data-cat="All">✦ All apps</button><button class="chip" data-cat="Tools">⚙ Tools</button><button class="chip" data-cat="Games">🎮 Games</button><button class="chip" data-cat="Social">◉ Social</button><button class="chip" data-cat="Photo">▧ Photo</button><button class="chip" data-cat="Education">▤ Education</button><button class="chip" data-cat="Other">✧ Other</button></div></section>
 <section class="section pinned hidden" id="pinnedSection"><div class="sectionTitle"><h2>✦ Featured & pinned</h2><span>Picked by Appistore</span></div><div class="cards" id="pinnedApps"></div></section>
-<section class="featureCarousel section" id="featureCarousel" aria-label="Featured apps">
+<section class="featureCarousel section hidden" id="featureCarousel" aria-label="Featured apps">
  <div id="featureTrack"></div>
  <div class="featureDots" id="featureDots"></div>
  <div class="featureControls"><button id="featurePrev" aria-label="Previous featured app">‹</button><button id="featureNext" aria-label="Next featured app">›</button></div>
@@ -42,12 +86,12 @@ body.dark .x{background:#263653;color:white}body.dark .studioEmpty{background:#1
 <section class="discoverySection"><div class="sectionTitle"><h2>🔥 Trending apps</h2><span>Most downloaded</span></div><div class="discoveryGrid" id="trendingApps"></div></section>
 <section class="discoverySection"><div class="sectionTitle"><h2>⭐ Top rated</h2><span>Community favourites</span></div><div class="discoveryGrid" id="topRatedApps"></div></section>
 <section class="discoverySection"><div class="sectionTitle"><h2>🆕 New releases</h2><span>Recently published</span></div><div class="discoveryGrid" id="newReleaseApps"></div></section>
-<section class="section"><div class="sectionTitle"><h2>Discover apps</h2><span id="resultCount">Loading…</span></div><div class="field" style="margin:0 0 12px"><input id="search" placeholder="Search apps, games and tools…" aria-label="Search apps"></div><div class="cards" id="appList"><div class="empty">Connecting to Appistore…</div></div></section>
+<section class="section"><div class="sectionTitle"><h2>All apps</h2><span id="resultCount">Loading…</span></div><div class="cards" id="appList"><div class="empty">Connecting to Appistore…</div></div></section>
 <section class="section hidden" id="accountSection"><div class="studioHero"><div><div class="eyebrow">CREATOR WORKSPACE</div><h2>Your Developer Studio</h2><p id="accountEmail">Manage your apps and track every submission.</p></div><button class="btn btnGhost btnSmall" id="logout">Sign out</button></div><div class="developerProfile"><div><h3>Developer profile</h3><p>This name appears on your public app listings.</p></div><div class="profileForm"><input id="developerName" maxlength="60" placeholder="Your developer / studio name"><button class="btn btnBlue btnSmall" id="saveDeveloperProfile">Save profile</button></div></div><div class="studioStats"><div class="studioStat"><span>Total submissions</span><b id="myTotal">0</b></div><div class="studioStat"><span>Pending review</span><b id="myPending">0</b></div><div class="studioStat"><span>Published</span><b id="myApproved">0</b></div><div class="studioStat"><span>Needs changes</span><b id="myRejected">0</b></div></div><div class="studioToolbar"><div><h3>Your apps</h3><p>Track the status of every app you submit.</p></div><button class="btn btnBlue" id="newApp">＋ Submit a new app</button></div><button class="btn btnLight hidden" id="adminOpen">Admin dashboard ↗</button><div id="myApps" class="studioList"></div></section>
 <section class="section hidden" id="adminSection"><div class="sectionTitle"><h2>Admin control room</h2><span>Review · Publish · Pin</span></div><div class="chips" id="adminFilters"><button class="chip active" data-status="pending">Pending</button><button class="chip" data-status="approved">Approved</button><button class="chip" data-status="rejected">Rejected</button><button class="chip" data-status="all">All apps</button></div><div id="adminList"></div></section>
 <div class="foot">© 2026 Appistore · Built for creators, reviewed by humans.</div>
 </main>
-<nav class="dock"><button class="active" data-nav="home">⌂ Home</button><button data-nav="browse">▦ Browse</button><button data-nav="account">♙ Studio</button><button class="plus" id="dockPublish">＋ Publish</button></nav>
+<nav class="dock"><button data-nav="home"><span>🎮</span>Games</button><button class="active" data-nav="browse"><span>▦</span>Apps</button><button data-nav="search"><span>⌕</span>Search</button><button data-nav="account"><span>♙</span>You</button></nav>
 <div class="overlay" id="authModal"><div class="dialog"><div class="dialogHead"><h2 id="authTitle">Developer login</h2><button class="x" data-close="authModal">✕</button></div><div class="hint">Create a free account or sign in to manage your app submissions.</div><div class="field"><label>Email address</label><input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com"></div><div class="field"><label>Password</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="At least 8 characters"></div><div class="adminActions"><button class="btn btnBlue" id="signIn">Sign in</button><button class="btn btnLight" id="signUp">Create free account</button><button class="btn btnLight" id="forgotPassword">Forgot password?</button><button class="btn btnLight" id="resendConfirm">Resend confirmation email</button></div><div id="resetPanel" class="hidden"><div class="field"><label>New password</label><input id="newPassword" type="password" minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></div><div class="field"><label>Confirm new password</label><input id="confirmPassword" type="password" minlength="8" autocomplete="new-password" placeholder="Type it again"></div><button class="btn btnBlue" id="savePassword">Save new password</button><button class="btn btnLight" id="backToLogin">Back to login</button></div></div></div>
 <div class="overlay" id="submitModal"><div class="dialog"><div class="dialogHead"><h2>Publish your app</h2><button class="x" data-close="submitModal">✕</button></div><p class="hint">Free for developers. Add the app details, icon, exactly 4 screenshots and an HTTPS APK link from Google Drive or MediaFire. Submissions stay private until admin approval.</p><form id="appForm"><div class="formGrid"><div class="field"><label>App name *</label><input id="appName" required maxlength="70" minlength="2" placeholder="Your app name"></div><div class="field"><label>Category *</label><select id="appCategory"><option>Tools</option><option>Games</option><option>Social</option><option>Photo</option><option>Education</option><option>Other</option></select></div></div><div class="field"><label>App description * (20–3000 characters)</label><textarea id="appDescription" required minlength="20" maxlength="3000" placeholder="What does your app do?"></textarea></div><div class="field"><label>App icon * (PNG/JPG/WebP, max 5 MB)</label><input id="appIconFile" type="file" accept="image/png,image/jpeg,image/webp" required></div><div class="field"><label>4 app screenshots * (PNG/JPG/WebP, max 5 MB each)</label><input id="appShots" type="file" accept="image/png,image/jpeg,image/webp" multiple required><span class="hint">Select exactly four screenshots.</span></div><div class="field"><label>APK download link *</label><input id="apkLink" type="url" required placeholder="https://drive.google.com/... or https://www.mediafire.com/..."><span class="hint">Share a public-view/download link. Appistore does not host APK files.</span></div><button class="btn btnBlue" id="sendApp" type="submit">Submit for review →</button></form></div></div>
 <div class="overlay" id="detailModal"><div class="dialog"><div class="dialogHead"><h2>App details</h2><button class="x" data-close="detailModal">✕</button></div><div id="detailBody"></div></div></div>
